@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Unicons CDN Link for Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+    <title>IMDB Rating Predictor</title>
+    <link rel="stylesheet" href="page2_style.css"/>
+    <!-- <script src="page2_index.js"></script> -->
+</head>
+
+<body>
+    <div class="page2-navbar">
+        <h2> RESULT </h2>
+    </div>
+
+    <section class="home-section">
+        <div class="page2-wrapper">
+            <table>
+                <tr>
+                    <th class="first">Movie Name </th>
+                    <td id="td_1">Now You See Me</td>
+                </tr>
+
+                <tr>
+                    <th>Genre</th>
+                    <td id="td_2">Action , Mystery</td>
+                </tr>
+                <tr>
+                    <th>Actors</th>
+                    <td id="td_3">Mark Ruffalo , Jesse Eisenberg , Moody Harelson</Td>
+                </tr>
+                <tr>
+                    <th>Actors Following</th>
+                    <td id="td_4">18M </td>
+                </tr>
+                <tr>
+                    <th >Director</th>
+                    <td id="td_5">Louis Leterrier</td>
+                </tr>
+                <tr>
+                    <th>Director Following</th>
+                    <td id="td_6">6M</td>
+                </tr>
+
+                <tr>
+                    <th>Budget</th>
+                    <td id="td_7"></td>
+                </tr>
+
+                <tr>
+                    <th>Movie Following</th>
+                    <td id="td_8"></td>
+                </tr>
+                <tr id="predicted-rating">
+                    <th>Predicted Rating:</th>
+                    <td id="td_9">7.6</td>
+                </tr>
+            </table>
+    </section>
+
+    <!-- home-section ending -->
+
+    <!--developed by section start-->
+    <section class="developed-by-section">
+        
+        <div id="mentor-container" class="card-container">
+            <div class="profile-card">
+                <img src="assets/default.jpg" alt="mentor.jpg" height="200px" width="200px" class="profile-pic"/>
+                <h3>Dr. Avni Vyas</h3>
+            </div>
+        </div>
+
+        <div id="members-container" class="card-container">
+            <div id="member1" class="profile-card">
+                <div class="img-cropper">
+                    <img src="assets/default.jpg" alt="member1.jpg" height="200px" width="200px" class="profile-pic"/>
+                </div>
+                <h3>Lovepreet Singh</h3>
+            </div>
+
+            <div id="member2" class="profile-card">
+                <div class="img-cropper">
+                    <img src="assets/default.jpg" alt="member2.jpg" height="200px" width="200px" class="profile-pic"/>
+                </div>
+                <h3>Ankit Sahu</h3>
+            </div>
+
+            <div id="member3" class="profile-card">
+                <div class="img-cropper">
+                    <img src="assets/default.jpg" alt="member1.jpg" height="200px" width="200px" class="profile-pic"/>
+                </div>
+                <h3>Anil Kumar</h3>
+            </div>
+
+            <div id="member4" class="profile-card">
+                <div class="img-cropper">
+                    <img src="assets/default.jpg" alt="member1.jpg" height="200px" width="200px" class="profile-pic"/>
+                </div>
+                <h3>Chamanjeet Singh</h3>
+            </div>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+
+<script>
+    const input = {
+        name: "Now You See Me",
+        genre: ["Action" , "Mystery"],
+        actors: ["Actor1" , "Actor2" , "Actor3"],
+        actorsFollowing: ["1.4M","2.6M",],
+        director: ["Director 1","Director2"],
+        directorFollowing: ["167k","254k"],
+        budget: "80 CR",
+        movieFollowing: "4M",
+    };
+
+    let e1 = document.getElementById("td_1");
+    let e2 = document.getElementById("td_2");
+    let e3 = document.getElementById("td_3");
+    let e4 = document.getElementById("td_4");
+    let e5 = document.getElementById("td_5");
+    let e6 = document.getElementById("td_6");
+    let e7 = document.getElementById("td_7");
+    let e8 = document.getElementById("td_8");
+
+
+
+    e1.innerHTML = input.name;
+    e2.innerHTML = input.genre[0] + " , " + input.genre[1];
+    e3.innerHTML = input.actors[0] + " , " + input.actors[1] + " , " + input.actors[2];
+    e4.innerHTML = input.actorsFollowing[0];
+    e5.innerHTML = input.director[0] + " , " + input.director[1];
+    e6.innerHTML = input.directorFollowing[0];
+    e7.innerHTML = input.budget;
+    e8.innerHTML = input.movieFollowing;
+
+
+
+
+    // let e1 = document.getElementById("td_1")
+    // e1.innerHTML = "ghjk";
+</script>
+</html>
